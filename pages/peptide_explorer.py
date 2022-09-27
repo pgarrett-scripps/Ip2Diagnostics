@@ -21,6 +21,7 @@ if st.button("Run"):
     st.dataframe(df)
 
     with st.expander('Mass Drift'):
+        st.write('Note: Delta Mass plot on IP2 seems to inverse PPM values')
         fig = px.scatter(df,
                          x='RetTime',
                          y='PPM',
