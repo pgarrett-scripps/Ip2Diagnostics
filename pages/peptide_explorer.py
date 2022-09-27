@@ -24,7 +24,9 @@ if st.button("Run"):
         fig = px.scatter(df,
                          x='RetTime',
                          y='PPM',
-                         hover_data=['Sequence'])
+                         hover_data=['Sequence'],
+                         trendline="ols",
+                         trendline_color_override="black")
         st.plotly_chart(fig)
 
     pr = df.profile_report()
